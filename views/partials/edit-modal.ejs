@@ -1,0 +1,98 @@
+<!-- Edit Modal-->
+<div
+  class="modal fade"
+  id="editModal-<%= p.id %>"
+  tabindex="-1"
+  aria-labelledby="editModalLabel-<%= p.id %>"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 480px">
+    <form
+      action="/edit/<%= p.id %>"
+      method="POST"
+      class="modal-content rounded-4 shadow-sm border-0 p-2"
+    >
+      <div class="modal-header border-0 py-2">
+        <h6
+          class="modal-title text-gradient fw-bold mx-auto mb-0"
+          id="editModalLabel-<%= p.id %>"
+        >
+          ویرایش ضرب‌المثل
+        </h6>
+        <button
+          type="button"
+          class="btn-close position-absolute end-0 me-3 mt-2"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+      <div class="modal-body px-3 pt-1 pb-2">
+        <div class="mb-2">
+          <label class="form-label small mb-1">متن دری</label>
+          <input
+            type="text"
+            name="textDari"
+            class="form-control form-control-sm"
+            value="<%= p.textDari %>"
+            required
+          />
+        </div>
+        <div class="mb-2">
+          <label class="form-label small mb-1">متن پشتو</label>
+          <input
+            type="text"
+            name="textPashto"
+            class="form-control form-control-sm"
+            value="<%= p.textPashto %>"
+            required
+          />
+        </div>
+        <div class="mb-2">
+          <label class="form-label small mb-1">ترجمه انگلیسی</label>
+          <input
+            type="text"
+            name="translationEn"
+            class="form-control form-control-sm"
+            value="<%= p.translationEn %>"
+            required
+          />
+        </div>
+        <div class="mb-2">
+          <label class="form-label small mb-1">معنی</label>
+          <textarea
+            name="meaning"
+            class="form-control form-control-sm"
+            rows="1"
+            required
+          >
+<%= p.meaning %></textarea
+          >
+        </div>
+        <div class="mb-2">
+          <label class="form-label small mb-1">دسته‌بندی</label>
+          <input
+            type="text"
+            name="category"
+            class="form-control form-control-sm"
+            value="<%= p.category %>"
+            required
+          />
+        </div>
+      </div>
+      <div class="modal-footer border-0 px-3 py-2 justify-content-between">
+        <button
+          type="button"
+          class="btn btn-sm btn-secondary"
+          data-bs-dismiss="modal"
+        >
+          لغو
+        </button>
+        <button
+          type="submit"
+          class="btn btn-sm custom-gradient-btn text-white fw-bold"
+        >
+          ذخیره
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,37 @@
+<!-- Delete proverb modal-->
+<div
+  class="modal fade"
+  id="deleteModal-<%= p.id %>"
+  tabindex="-1"
+  aria-labelledby="deleteModalLabel-<%= p.id %>"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered" style="max-width: 400px">
+    <div class="modal-content p-3 rounded-4">
+      <div class="modal-header border-0 pb-0">
+        <h5
+          class="modal-title text-danger fw-bold w-100 text-center"
+          id="deleteModalLabel-<%= p.id %>"
+        >
+          حذف ضرب‌المثل
+        </h5>
+        <button
+          type="button"
+          class="btn-close position-absolute top-0 end-0 m-3"
+          data-bs-dismiss="modal"
+        ></button>
+      </div>
+      <div class="modal-body text-center">
+        <p class="mb-3">
+          آیا مطمئن هستید که می‌خواهید این ضرب‌المثل را حذف کنید؟
+        </p>
+        <p class="fw-bold"><%= p.textDari %></p>
+      </div>
+      <div class="modal-footer justify-content-center border-0 pt-0">
+        <a href="/delete/<%= p.id %>" class="btn btn-danger px-4">
+          بله، حذف شود
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
