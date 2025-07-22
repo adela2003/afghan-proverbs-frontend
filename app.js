@@ -11,7 +11,7 @@ const __dirname = path.dirname(__filename);
 // setting
 const app = express();
 const PORT = 5000;
-const API_URL = "https://afghan-proverbs-api-1-iolb.onrender.com"; // Backend URL Path
+const API_URL = "https://afghan-proverbs-backend-j5aw.onrender.com/proverbs"; // Backend URL Path
 
 // set static files and ejs
 app.set("view engine", "ejs");
